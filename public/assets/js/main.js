@@ -13,7 +13,7 @@ function clickButton() {
     s.src = "https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote";
     document.body.appendChild(s);
 
-    //disable the button enough time to wait the API
+    //disable the button enough time to wait for the API
     document.getElementById("button").classList.add('button-disabled');
     document.getElementById("button").disabled = true;
     setTimeout(function(){
