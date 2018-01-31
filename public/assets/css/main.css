@@ -45,8 +45,20 @@ body {
   text-align: center;
   letter-spacing: 2px;
 
+  outline: none;
   background-color: #000;
   color: #fff;
+}
 
-  outline: none;
+.quote-container > button:active {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.quote-container > .button-disabled {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  cursor: not-allowed;
 }
