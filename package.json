@@ -1,0 +1,16 @@
+{
+  "name": "instant-inspiration",
+  "version": "1.0.0",
+  "description": "Get a quick dose of inspiration.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "gulp serve"
+  },
+  "author": "Bogdan Covrig",
+  "license": "ISC",
+  "devDependencies": {
+      "gulp": "^3.9.1",
+      "gulp-serve": "^1.4.0"
+    }
+  }
