@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100');
 
 html, body {
   padding: 0;
@@ -8,7 +8,6 @@ html, body {
 
 body {
   font-family: 'Roboto Slab', serif;
-  font-weight: 100;
 
   display: -webkit-box;
   display: -moz-box;
@@ -38,7 +37,6 @@ body {
 
   font-size: inherit;
   font-family: inherit;
-  font-weight: 100;
 
   text-transform: uppercase;
   text-align: center;
@@ -46,6 +44,7 @@ body {
 
   outline: none;
   background-color: #000;
+  border: 1px solid #000;
   color: #fff;
 }
 
