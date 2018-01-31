@@ -1,5 +1,4 @@
-function parseQuote(response)
-{
+function parseQuote(response) {
   document.getElementById("text").innerHTML = response.quoteText;
   if(response.quoteAuthor !== '') {
     document.getElementById("author").innerHTML = "-- " + response.quoteAuthor;
