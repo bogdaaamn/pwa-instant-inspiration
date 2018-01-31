@@ -20,6 +20,21 @@
     <p id="author"></p>
     <button id="button" type="button" onclick="clickButton()">Inspire me</button>
   </div>
+
   <script src="assets/js/main.js"></script>
+
+  <!--Firebase init-->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script>
+  var config = {
+    apiKey: "AIzaSyDQLPhDiuj3F286t7r5c8xerp41q9JkRFY",
+    authDomain: "wpa-instant-inspiration.firebaseapp.com",
+    databaseURL: "https://wpa-instant-inspiration.firebaseio.com",
+    projectId: "wpa-instant-inspiration",
+    storageBucket: "",
+    messagingSenderId: "1076199466609"
+  };
+  firebase.initializeApp(config);
+</script>
 </body>
 </html>
