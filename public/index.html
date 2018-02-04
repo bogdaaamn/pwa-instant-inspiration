@@ -1,40 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <link rel="manifest" href="manifest.json">
 
-  <title>Instant inspiration</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <meta name="author" content="Bogdan Covrig">
-  <meta name="description" content="Get a quick dose of inspiration.">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Instant inspiration">
+    <meta name="apple-mobile-web-app-title" content="Instant inspiration">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="assets/css/main.css" type="text/css">
-</head>
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
 
-<body>
-  <div class="quote-container">
-    <p id="text"></p>
-    <p id="author"></p>
-    <button id="button" type="button" onclick="clickButton()">Inspire me</button>
-  </div>
+    <title>Instant inspiration</title>
 
-  <script src="assets/js/main.js"></script>
+    <meta name="author" content="Bogdan Covrig">
+    <meta name="description" content="Get a quick dose of inspiration.">
 
-  <!--Firebase init-->
-  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-  <script>
-  var config = {
-    apiKey: "AIzaSyDQLPhDiuj3F286t7r5c8xerp41q9JkRFY",
-    authDomain: "wpa-instant-inspiration.firebaseapp.com",
-    databaseURL: "https://wpa-instant-inspiration.firebaseio.com",
-    projectId: "wpa-instant-inspiration",
-    storageBucket: "",
-    messagingSenderId: "1076199466609"
-  };
-  firebase.initializeApp(config);
-</script>
-</body>
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+  </head>
+
+  <body>
+    <div class="quote-container">
+      <p id="text"></p>
+      <p id="author"></p>
+      <button id="button" type="button" onclick="clickButton()">Inspire me</button>
+    </div>
+
+    <script src="/main.js"></script>
+
+    <!--Firebase init-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCX4JMRScbfCEpQxYwc3wdmieoouwAhOBM",
+        authDomain: "instant-inspiration-pwa.firebaseapp.com",
+        databaseURL: "https://instant-inspiration-pwa.firebaseio.com",
+        projectId: "instant-inspiration-pwa",
+        storageBucket: "",
+        messagingSenderId: "508697492038"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!--Service Worker registration -->
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+        .then(function() {
+          console.log("Service Worker Registered");
+        });
+      }
+    </script>
+
+    <!-- Google Analytics stuff -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85235403-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-85235403-5');
+    </script>
+  </body>
 </html>
