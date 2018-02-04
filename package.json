@@ -19,5 +19,13 @@
     "idb": "^2.0.4",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BogDAAAMN/pwa-instant-inspiration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BogDAAAMN/pwa-instant-inspiration/issues"
+  },
+  "homepage": "https://github.com/BogDAAAMN/pwa-instant-inspiration#readme"
 }
